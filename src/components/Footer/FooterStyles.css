@@ -74,7 +74,7 @@ p {
 }
 
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 480px) {
     .footer-container {
         justify-content: center;
         text-align: center;
@@ -84,17 +84,50 @@ p {
 
     .logo {
         width: 250px;
-        margin: 2rem;
-        position: relative;
         bottom: 1.5rem;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
     }
 
     .phone {
-        margin-right: 2rem;
+        margin-right: 4rem;
+    }
+
+    .email {
+        margin-right: 3rem;
+
     }
     
     .social {
         margin-top: 1rem;
         margin-left: 1rem;
     }
+
+    .location {
+        display: flex;
+        margin-bottom: 0.8rem;
+        justify-content: center;
+        margin-right: 3rem;
+        text-align: center;
+    }
+    
+    .location p {
+        line-height: 30px;
+        color: #333;
+    }
+}
+
+@media screen and (max-width: 380px){ 
+    .footer-container {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+    }
+
+    .email h4{
+        font-size: 18px;
+    }
+
 }
