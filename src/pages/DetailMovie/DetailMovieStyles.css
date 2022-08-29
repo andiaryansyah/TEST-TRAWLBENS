@@ -1,0 +1,115 @@
+.hero-img {
+    width: 100%;
+    background: rgb(0, 0, 0, 0.5);
+    height: 60vh;
+    position: relative;
+}
+
+.hero-img::before {
+    content: "";
+    background: url("https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80");
+    background-size: cover;
+    background-position: center top;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.details{
+    width: 100%;
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.details .left {
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+    max-width: 350px;
+}
+
+.details .left p {
+    margin: 1.2rem 0;
+}
+
+.details .right {
+    max-width: 700px;
+}
+
+.right .img-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+
+.right .img {
+    max-width: 100%;
+}
+
+.pro-btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    margin: 2rem auto;
+}
+
+.pro-btns .btn {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0.2rem;
+}
+
+.card-container {
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+    padding-bottom: 5rem;
+}
+
+.card {
+    background: #f6f6f6;
+    padding: 1.2rem 1rem;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.card-title {
+    color: #333;
+    padding: 1rem 0;
+}
+
+.card p {
+    padding: 0 2rem;
+}
+
+.card h1 {
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+
+}
+
+.card p {
+    color: #333;
+
+}
+
+.share {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
+
+.share h4 {
+    color: #333;
+
+}
