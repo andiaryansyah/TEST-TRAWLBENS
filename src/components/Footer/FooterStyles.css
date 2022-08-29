@@ -76,6 +76,25 @@ p {
 
 @media screen and (max-width: 640px) {
     .footer-container {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
         grid-template-columns: 1fr;
+    }
+
+    .logo {
+        width: 250px;
+        margin: 2rem;
+        position: relative;
+        bottom: 1.5rem;
+    }
+
+    .phone {
+        margin-right: 2rem;
+    }
+    
+    .social {
+        margin-top: 1rem;
+        margin-left: 1rem;
     }
 }

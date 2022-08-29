@@ -31,9 +31,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="right">
-            <h4>Home</h4>
-            <h4>About</h4>
-            <h4>Contact</h4>
+            <h4>HOME</h4>
+            <h4>ABOUT</h4>
+            <h4>CONTACT</h4>
             <div className="social">
             <FaFacebook size={30} style={{ color: "#333", marginRight: "1rem" }} />
             <FaTwitter size={30} style={{ color: "#333", marginRight: "1rem" }} />

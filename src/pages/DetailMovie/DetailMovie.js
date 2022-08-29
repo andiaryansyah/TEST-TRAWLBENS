@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { getDetailsMovie } from "../../store/action";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams, Link } from "react-router-dom";
@@ -7,13 +7,22 @@ import Spinner from "../../components/Spinner/Spinner";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import "./DetailMovieStyles.css";
+import Popup from "../../components/Popup/Popup";
+import Rating from "react-rating";
 
 const DetailMovie = () => {
   const dispatch = useDispatch();
+  const [rating, setRating] = useState(0);
   const { getDetails } = useSelector((state) => state.movies);
   const { loading } = useSelector((state) => state.movies);
   const { id } = useParams();
   const stars = Array(5).fill(5);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     dispatch(getDetailsMovie(id));
@@ -40,8 +49,11 @@ const DetailMovie = () => {
                 </>
               ) : null}
               <p>
-                {stars.map((_, index)=> (
-                  <FaStar key={index} style={{color:'orange', paddingTop:'6px'}} />
+                {stars.map((_, index) => (
+                  <FaStar
+                    key={index}
+                    style={{ color: "orange", paddingTop: "6px" }}
+                  />
                 ))}
                 {getDetails.vote_average}
               </p>
@@ -86,12 +98,45 @@ const DetailMovie = () => {
                 <p>{getDetails.overview}</p>
               </div>
               <div className="share">
-                <h4>
-                  <FaShare size={20} /> SHARE
-                </h4>
-                <h4>
-                  <FaStar size={20} /> RATE THIS
-                </h4>
+                <button onClick="#" className="btn-share">
+                    <FaShare size={20} /> SHARE
+                </button>
+                <button className="btn-rate" onClick={togglePopup}>
+                    <FaStar size={20} /> RATE THIS
+                </button>
+                {isOpen && (
+                  <Popup
+                    handleClose={togglePopup}
+                    content={
+                      <div>
+                      <div className="rating">
+                        <Rating
+                          
+                          fractions={2}
+                          emptySymbol={
+                            <FaStar
+                              color={"grey"}
+                              size={'70'}
+                            />
+                          }
+                          fullSymbol={
+                            <FaStar
+                              color={"orange"}
+                              size={'70'}
+                              
+                            />
+                          }
+                          initialRating={rating}
+                          onClick={(rate) => setRating(rate)}
+                        />
+                        </div>
+                        <div className="score">
+                          <h1>Rating: {rating}</h1>
+                        </div>
+                      </div>
+                    }
+                  />
+                )}
               </div>
             </div>
           </div>
