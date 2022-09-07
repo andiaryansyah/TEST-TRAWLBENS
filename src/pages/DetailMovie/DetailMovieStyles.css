@@ -52,8 +52,10 @@
 }
 
 .right .img {
-    max-width: 100%;
+    max-width:100%;
+    margin-bottom: 5rem;
 }
+
 
 .pro-btns {
     display: flex;
@@ -185,5 +187,16 @@
 
     .rating Rating {
         size: 10px;
+    }
+
+    .card-container {
+        max-width: 1140px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+        padding-bottom: 5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }

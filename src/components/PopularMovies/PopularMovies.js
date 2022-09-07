@@ -38,10 +38,10 @@ const PopularMovies = () => {
                     <Link to={`/detailmovie/${movie.id}`}>
                       <img
                         src={
-                          movie.backdrop_path
-                            ? `${process.env.REACT_APP_IMDB_IMAGE}${movie.backdrop_path}`
-                            : movie.poster_path
+                          movie.poster_path
                             ? `${process.env.REACT_APP_IMDB_IMAGE}${movie.poster_path}`
+                            : movie.backdrop_path
+                            ? `${process.env.REACT_APP_IMDB_IMAGE}${movie.backdrop_path}`
                             : process.env.REACT_APP_NO_IMAGE
                         }
                         alt="..."

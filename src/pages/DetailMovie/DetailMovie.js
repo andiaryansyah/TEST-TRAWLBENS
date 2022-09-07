@@ -4,8 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import { FaShare, FaStar } from "react-icons/fa";
 import Spinner from "../../components/Spinner/Spinner";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 import "./DetailMovieStyles.css";
 import Popup from "../../components/Popup/Popup";
 import Rating from "react-rating";
@@ -35,7 +33,6 @@ const DetailMovie = () => {
         <Spinner />
       ) : (
         <div>
-          <Header />
           <div className="hero-img"></div>
           <div className="details">
             <div className="left">
@@ -140,7 +137,6 @@ const DetailMovie = () => {
               </div>
             </div>
           </div>
-          <Footer />
         </div>
       )}
     </>

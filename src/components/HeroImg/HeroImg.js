@@ -16,7 +16,7 @@ const HeroImg = () => {
             <h1>LET'S MAKE YOUR OWN CINEMA</h1>
             <div>
                 <Link className='btn' to="/">Movies</Link>
-                <Link className='btn btn-light' to="/">Contact</Link>
+                <Link className='btn btn-light' to="/contact">Contact</Link>
             </div>
         </div>
     </div>

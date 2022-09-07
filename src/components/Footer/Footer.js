@@ -1,6 +1,7 @@
 import "./FooterStyles.css";
 
 import React from "react";
+import {Link} from "react-router-dom";
 import { FaFacebook, FaHome, FaLinkedin, FaMailBulk, FaPhone, FaTwitter } from "react-icons/fa";
 import Cinema from '../../assets/img/cinema.png'
 
@@ -31,9 +32,13 @@ const Footer = () => {
           </div>
         </div>
         <div className="right">
-            <h4>HOME</h4>
-            <h4>ABOUT</h4>
-            <h4>CONTACT</h4>
+          <Link to="#">
+            <p>Support</p>
+          </Link>
+          <Link to="#">
+            <p>Contact Us</p>
+          </Link>
+            <h4>Follow Us</h4>
             <div className="social">
             <FaFacebook size={30} style={{ color: "#333", marginRight: "1rem" }} />
             <FaTwitter size={30} style={{ color: "#333", marginRight: "1rem" }} />

@@ -57,7 +57,11 @@ h4 {
 
 .right h4 {
     color: #333;
+    padding-top: 1.2rem;
+}
 
+.right p {
+    color: #333;
 }
 
 p {
