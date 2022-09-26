@@ -45,7 +45,7 @@ export const Cari = (search) => {
             dispatch(setLoading(false));
                 dispatch(searchMovies(res.data))
             })
-            .catch((err) => {
+            .catch((err) => {   
             dispatch(setLoading(false));
             console.log(err);
             })
